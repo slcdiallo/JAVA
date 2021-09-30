@@ -1,0 +1,22 @@
+  1  import java.util.Scanner;
+  2  
+  3  public class GuessNumberOneTime {
+  4    public static void main(String[] args) {
+  5      // Generate a random number to be guessed
+  6      int number = (int)(Math.random() * 101);
+  7  
+  8      Scanner input = new Scanner(System.in);
+  9      System.out.println("Guess a magic number between 0 and 100");
+ 10  
+ 11      // Prompt the user to guess the number
+ 12      System.out.print("\nEnter your guess: ");
+ 13      int guess = input.nextInt();
+ 14        
+ 15      if (guess == number)
+ 16        System.out.println("Yes, the number is " + number);
+ 17      else if (guess > number)
+ 18        System.out.println("Your guess is too high");
+ 19      else 
+ 20        System.out.println("Your guess is too low");    
+ 21    }    
+ 22  }

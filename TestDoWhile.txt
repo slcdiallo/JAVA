@@ -1,0 +1,24 @@
+  1  import java.util.Scanner; 
+  2  
+  3  public class TestDoWhile {
+  4    /** Main method */
+  5    public static void main(String[] args) {
+  6      int data;
+  7      int sum = 0;
+  8  
+  9      // Create a Scanner
+ 10      Scanner input = new Scanner(System.in);
+ 11  
+ 12      // Keep reading data until the input is 0
+ 13      do {
+ 14        // Read the next data
+ 15        System.out.print(
+ 16          "Enter an integer (the input ends if it is 0): ");
+ 17        data = input.nextInt();
+ 18  
+ 19        sum += data;
+ 20      } while (data != 0);
+ 21  
+ 22      System.out.println("The sum is " + sum);
+ 23    }
+ 24  }

@@ -1,0 +1,30 @@
+  1  import java.util.Scanner;
+  2  
+  3  public class HexDigit2Dec {
+  4    public static void main(String[] args) {
+  5      Scanner input = new Scanner(System.in);
+  6      System.out.print("Enter a hex digit: ");
+  7      String hexString = input.nextLine();
+  8      
+  9      // Check if the hex string has exactly one character
+ 10      if (hexString.length() != 1) {
+ 11        System.out.println("You must enter exactly one character");
+ 12        System.exit(1);
+ 13      }
+ 14      
+ 15      // Display decimal value for the hex digit
+ 16      char ch = Character.toUpperCase(hexString.charAt(0));    
+ 17      if ('A' <= ch && ch <= 'F') {
+ 18        int value = ch - 'A' + 10;
+ 19        System.out.println("The decimal value for hex digit "
+ 20          + ch + " is " + value);
+ 21      }
+ 22      else if (Character.isDigit(ch)) {
+ 23        System.out.println("The decimal value for hex digit "
+ 24          + ch + " is " + ch);
+ 25      }
+ 26      else {
+ 27        System.out.println(ch + " is an invalid input");
+ 28      }
+ 29    }
+ 30  }

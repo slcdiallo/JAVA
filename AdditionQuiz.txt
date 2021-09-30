@@ -1,0 +1,21 @@
+1  import java.util.Scanner;
+  2  
+  3  public class AdditionQuiz {
+  4    public static void main(String[] args) {
+  5      int number1 = (int)(System.currentTimeMillis() % 10); // way to generate a random number between 0-9
+  6      int number2 = (int)(System.currentTimeMillis() / 10 % 10);
+  7  
+  8      // Create a Scanner
+  9      Scanner input = new Scanner(System.in);
+ 10  
+ 11      System.out.print(
+ 12        "What is " + number1 + " + " + number2 + "? ");
+ 13  
+ 14      int answer = input.nextInt();
+ 15  
+ 16      System.out.println(
+ 17        number1 + " + " + number2 + " = " + answer + " is " +
+ 18        (number1 + number2 == answer));
+ 19    }
+ 20  }
+            

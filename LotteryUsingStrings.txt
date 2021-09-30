@@ -1,0 +1,38 @@
+  1  import java.util.Scanner;
+  2  
+  3  public class LotteryUsingStrings {
+  4    public static void main(String[] args) {
+  5      // Generate a lottery as a two-digit string
+  6      String lottery = "" + (int)(Math.random() * 10)
+  7        + (int)(Math.random() * 10);
+  8  
+  9      // Prompt the user to enter a guess
+ 10      Scanner input = new Scanner(System.in);
+ 11      System.out.print("Enter your lottery pick (two digits): ");
+ 12      String guess = input.nextLine();
+ 13  
+ 14      // Get digits from lottery
+ 15      char lotteryDigit1 = lottery.charAt(0); 
+ 16      char lotteryDigit2 = lottery.charAt(1); 
+ 17  
+ 18      // Get digits from guess
+ 19      char guessDigit1 = guess.charAt(0);
+ 20      char guessDigit2 = guess.charAt(1);
+ 21  
+ 22      System.out.println("The lottery number is " + lottery);
+ 23  
+ 24      // Check the guess
+ 25      if (guess.equals(lottery))
+ 26        System.out.println("Exact match: you win $10,000");
+ 27      else if (guessDigit2 == lotteryDigit1
+ 28            && guessDigit1 == lotteryDigit2)
+ 29        System.out.println("Match all digits: you win $3,000");
+ 30      else if (guessDigit1 == lotteryDigit1 
+ 31            || guessDigit1 == lotteryDigit2 
+ 32            || guessDigit2 == lotteryDigit1 
+ 33            || guessDigit2 == lotteryDigit2)
+ 34        System.out.println("Match one digit: you win $1,000");
+ 35      else
+ 36        System.out.println("Sorry, no match"); 
+ 37    }
+ 38  }

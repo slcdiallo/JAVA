@@ -1,0 +1,19 @@
+Given a Scanner reference variable named input that has been associated with an input source consisting of a sequence of strings and two int variables, count and longest, write the code necessary to examine all the strings in the input source and determine how long the longest string (or strings are).
+
+That value should be assigned to longest.
+The number ﻿of strings that are of that length should be assigned to count.
+
+For a hint on this quiz, please check https://liveexample.pearsoncmg.com/supplement/REVELProjectHint.pdf.
+
+
+count = 0;
+longest = 0;
+while (input.hasNext()) {
+  String s = input.next();
+  if (s.length() > longest) {
+    longest = s.length();
+    count = 1;
+  } 
+  else if (s.length() == longest)
+    count++;
+}

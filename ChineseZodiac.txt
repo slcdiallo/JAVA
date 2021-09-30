@@ -1,0 +1,25 @@
+  1  import java.util.Scanner;
+  2  
+  3  public class ChineseZodiac {
+  4    public static void main(String[] args) {
+  5      Scanner input = new Scanner(System.in);
+  6      
+  7      System.out.print("Enter a year: ");
+  8      int year = input.nextInt();
+  9      
+ 10      switch (year % 12) {
+ 11        case 0: System.out.println("monkey"); break;
+ 12        case 1: System.out.println("rooster"); break;
+ 13        case 2: System.out.println("dog"); break;
+ 14        case 3: System.out.println("pig"); break;
+ 15        case 4: System.out.println("rat"); break;
+ 16        case 5: System.out.println("ox"); break;
+ 17        case 6: System.out.println("tiger"); break;
+ 18        case 7: System.out.println("rabbit"); break;
+ 19        case 8: System.out.println("dragon"); break;
+ 20        case 9: System.out.println("snake"); break;
+ 21        case 10: System.out.println("horse"); break;
+ 22        case 11: System.out.println("sheep"); break;
+ 23      }
+ 24    }
+ 25  }

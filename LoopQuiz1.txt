@@ -1,0 +1,30 @@
+Write a loop that reads positive integers from standard input and that terminates when it reads an integer that is not positive.
+
+After the loop terminates, it prints out, on a line by itself and separated by spaces,
+
+the sum of all the even integers read,
+the sum of all the odd integers read,
+a count of the number of even integers read, and
+a count of the number of odd integers read,
+all separated by at least one space.
+
+Declare any variables that are needed.
+
+Assume the availability of a variable, stdin, that references a Scanner object associated with standard input. That is, stdin = new Scanner(System.in); is given
+
+int x;
+int esum = 0, ecount = 0;
+int osum = 0, ocount = 0;
+x = stdin.nextInt();
+while (x > 0) {
+  if (x % 2 == 0) {
+    esum += x;
+    ecount++;
+  }
+  else {
+    osum += x;
+    ocount++;
+  }
+  x = stdin.nextInt();
+}
+System.out.println(esum + " " + osum + " " + ecount + " " + ocount);

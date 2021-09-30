@@ -1,0 +1,23 @@
+  1  import java.util.Scanner;
+  2  
+  3  public class RepeatAdditionQuiz {
+  4    public static void main(String[] args) {
+  5      int number1 = (int)(Math.random() * 10);
+  6      int number2 = (int)(Math.random() * 10);
+  7  
+  8      // Create a Scanner
+  9      Scanner input = new Scanner(System.in);
+ 10  
+ 11      System.out.print(
+ 12        "What is " + number1 + " + " + number2 + "? ");
+ 13      int answer = input.nextInt();
+ 14      
+ 15      while (number1 + number2 != answer) {
+ 16        System.out.print("Wrong answer. Try again. What is " 
+ 17          + number1 + " + " + number2 + "? ");
+ 18        answer = input.nextInt();
+ 19      }
+ 20  
+ 21      System.out.println("You got it!");
+ 22    }
+ 23  }

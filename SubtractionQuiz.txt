@@ -1,0 +1,31 @@
+ 1  import java.util.Scanner; 
+  2  
+  3  public class SubtractionQuiz {
+  4    public static void main(String[] args) {
+  5      // 1. Generate two random single-digit integers
+  6      int number1 = (int)(Math.random() * 10);
+  7      int number2 = (int)(Math.random() * 10);
+  8  
+  9      // 2. If number1 < number2, swap number1 with number2
+ 10      if (number1 < number2) {
+ 11        int temp = number1;
+ 12        number1 = number2;
+ 13        number2 = temp;
+ 14      }
+ 15  
+ 16      // 3. Prompt the student to answer "what is number1 − number2?"
+ 17      System.out.print
+ 18        ("What is " + number1 + " - " + number2 + "? ");
+ 19      Scanner input = new Scanner(System.in);
+ 20      int answer = input.nextInt();
+ 21  
+ 22      // 4. Grade the answer and display the result
+ 23      if (number1 - number2 == answer)
+ 24        System.out.println("You are correct!");
+ 25      else {
+ 26        System.out.println("Your answer is wrong.");
+ 27        System.out.println(number1 + " - " + number2 + 
+ 28          " should be " + (number1 - number2)); 
+ 29      }
+ 30    }
+ 31  }

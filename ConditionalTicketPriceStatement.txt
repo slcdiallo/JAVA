@@ -1,0 +1,5 @@
+if (ages >= 16)
+  ticketPrice = 20;
+else 
+  ticketPrice = 10;
+ticketPrice = (ages >= 16) ? 20 : 10;

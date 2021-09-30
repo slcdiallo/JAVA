@@ -1,0 +1,17 @@
+Given an int variable n that has been initialized to a positive value and, in addition, 
+int variables k and total that have already been declared, use a do...while loop to compute the sum of the cubes of the first n whole numbers, 
+and store this value in total.
+
+Use no variables other than n, k, and total.
+
+
+
+
+
+
+total = 0;
+k = n;
+do {
+  total += k * k * k;
+  k--;
+} while (k > 0);
